@@ -1,6 +1,6 @@
 # Remote Access (Week 1 Lab Report)
 
-1. Find Your Course Account on ETS
+1. **Find Your Course Account on ETS**
     - Go to the [account lookup](https://sdacs.ucsd.edu/~icc/index.php) website. It should look like this:
     ![image](login.png)
     - Follow the site's instructions
@@ -9,16 +9,26 @@
       - Click the change password link
       - If you know your TritonLink password (associated with you UCSD account/email), enter it in all of the password fields. If you don't, create a new password.
       - Wait a few minutes for the password to be approved and activated.
-2. Installing VS Code
+2. **Installing VS Code**
     - Skip these if you have already installed VS Code or have access to it on the computer you are using (I already had it installed).
     - Follow [VS Code's installation instructions](https://code.visualstudio.com/)
     - Open VS Code. It should look something like this:
     ![image](VScode.png)
-3. Remotely Connecting
+3. **Remotely Connecting**
     - Open terminal in VS Code (you can drag the terminal up from the bottom of the window or click Terminal>New Terminal in the menu bar).
     - Type the following command in your terminal: `$ ssh cs15lwi23zz@ieng6.ucsd.edu` (without typing the $).
       - If you can't enter anything in your terminal, try restarting VS Code.
     - An authenticity message will appear, so type `yes` and press enter.
     - Enter your password. You should now be connected to the remote server, with a message similar to what's below.
     ![image](successfullogin.png)
-4. Trying Some Commands
+4. **Trying Some Commands**
+    - In your VS Code terminal, try entering these commands (on your own computer and the remote computer): `pwd`, `cs`, `ls`, `cp`, and `mkdir`.
+    - These are some examples of commands that you can try
+      - `pwd`
+      - `cd ~`
+      - `cd ..`
+      - `cat /home/linux/ieng6/cs15lwi23/public/hello.txt
+      - `ls -lat`
+    - Here is what happens when you run some of these:
+    ![image](commands.png)
+      
