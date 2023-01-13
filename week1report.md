@@ -1,6 +1,6 @@
 # Remote Access (Week 1 Lab Report)
 
-**1. Find Your Course Account on ETS**
+1. Find Your Course Account on ETS
     - Go to the [account lookup](https://sdacs.ucsd.edu/~icc/index.php) website
     - Follow the site's instructions
       - Enter either your UCSD username and Student ID (beginning with an A or U) or your last name and Studnet ID (under New Studnet) in the respective fields.
