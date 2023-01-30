@@ -5,20 +5,21 @@
 
 ![StringServer message 1](stringserver hello.png)
 
-- Before opening the web server in a browser, starting the server from a terminal called the Server class's `start` method. The first message, "hello!", calls the `handleRequest` method in the Handler class.
-- The start method's arguments are 8026, the web server's port number, and a Handler object. The handleRequest method takes the argument https://localhost:8026/add-message?s=hello! for the url paramter. The value of str in the Handler class is "", an empty String.
-- From this specific request, the parameters array is declared and initialized to `{"s", "hello!"}` and str's value is concatenated by accessing `parameters[1]`, so it changes to "\nhello!"
+- Before opening the web server in a browser, starting the server from a terminal called the Server class's `start` method. With the first message, "hello!", the `handleRequest` method in the Handler class is called.
+- The `start` method's arguments are 8026, the web server's port number, and a Handler object. The `handleRequest` method takes the argument https://localhost:8026/add-message?s=hello! for the `url` parameter. The value of `str` in the Handler class is "", an empty String.
+- From this specific request, the `parameters` array is declared and initialized to `{"s", "hello!"}` and `str`'s value is concatenated by accessing `parameters[1]`, so it changes to "\nhello!"
 
 ![StringServer message 2](string server this is.png)
 
-- The first message, "this is a string server", calls the handleRequest method in the Handler class.
-- The handleRequest method takes the argument https://localhost:8026/add-message?s=this is a string server for the url paramter. The value of str in the Handler class is "\nhello!".
-- From this specific request, the parameters array is declared and initialized to `{"s", "this is a string server"}` and str's value is concatenated by accessing `parameters[1]`, so it changes to "\nhello!\nthis is a string server".
+- With the second message, "this is a string server", the handleRequest method in the Handler class is called.
+- The `handleRequest` method takes the argument https://localhost:8026/add-message?s=this%20is%20a%20string%20server for the `url` parameter. The value of `str` in the Handler class is "\nhello!".
+- From this specific request, the `parameters` array is declared and initialized to `{"s", "this is a string server"}` and `str`'s value is concatenated by accessing `parameters[1]`, so it changes to "\nhello!\nthis is a string server".
 
 
 ## Part 2
-Buggy program: `reversed(int[] arr)` in the ArrayExamples class
-Failure-inducing input: `{1, 2, 3, 4}` 
+**Buggy program:** `reversed(int[] arr)` in the ArrayExamples class
+
+**Failure-inducing input:** `{1, 2, 3, 4}` 
 
 ```
 @Test
@@ -28,7 +29,7 @@ Failure-inducing input: `{1, 2, 3, 4}`
   }
 ```
 
-Input that doesn't induce a failure: `{ }` (empty array)
+**Input that doesn't induce a failure:** `{ }` (empty array)
 ```
 @Test
   public void testReversed() {
@@ -37,14 +38,16 @@ Input that doesn't induce a failure: `{ }` (empty array)
   }
 ```
 
-The symptom: 
+**The symptom: **
+
   Terminal:
   ![run junit](run junit reversed.png)
   
   Running the individual test with failure-inducing input:
   ![testReversedEven bug](testReversedEven bug.png)
 
-The bug:
+**The bug:**
+
    Before code change:
    ```
    static int[] reversed(int[] arr) {
@@ -67,8 +70,8 @@ The bug:
    }
    ```
   
-The fixed code assigns each index of `newArray` to an element of `arr` in correct, reversed order by putting `newArray[arr.length - i - 1]` on the left side of the assignment operator, instead of incorrectly putting `arr[i]` on the left. This way, `newArray` gets updated to the values in reverse order. The fixed code also properly returns `newArray` instead of `arr`, so that the array that has been reversed is returned as a result of the program.
+The fixed code assigns each index of `newArray` to an element of `arr` in correct, reversed order by putting `newArray[arr.length - i - 1]` on the left side of the assignment operator, instead of incorrectly putting `arr[i]` on the left. This way, `newArray` gets updated to the values in reverse order. Before the fix, each index of `arr` was updated to a value of `0` because the default values after creating the `newArray` object were `0`. The fixed code also properly returns `newArray` instead of `arr`, so that the array that has been reversed is returned as a result of the program.
   
 
 ## Part 3
-From the labs in week 2 and 3, I learned that a web page can be modified simply by adjusting its URL's path and query. For instance, by using the `/add` path and adding a String in the query of my Search Engine (week 2), I was able to add elements to an ArrayList and display a different message on the web page. By using the `/search` path, I could display an array of the Strings that had been added to the Search Engine that contained the query.
+From the labs in week 2 and 3, I learned that a web page can be modified simply by adjusting its URL's path and query. For instance, by using the `/add` path and adding a String in the query of my Search Engine (week 2), I was able to add specific elements to an ArrayList and display a different message on the web page. By using the `/search` path, I could display an array of the Strings that had been added to the Search Engine that contained the query.
