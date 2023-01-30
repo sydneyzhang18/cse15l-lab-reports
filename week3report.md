@@ -67,7 +67,7 @@ The bug:
    }
    ```
 The fixed code assigns each index of `newArray` to an element of `arr` in correct, reversed order by putting `newArray[arr.length - i - 1]` on the left side of the assignment operator, instead of incorrectly putting `arr[i]` on the left. This way, `newArray` gets updated to the values in reverse order. The fixed code also properly returns `newArray` instead of `arr`, so that the array that has been reversed is returned as a result of the program.
- 
+  
 
 ## Part 3
 From the labs in week 2 and 3, I learned that a web page can be modified simply by adjusting its URL's path and query. For instance, by using the `/add` path and adding a String in the query of my Search Engine (week 2), I was able to add elements to an ArrayList and display a different message on the web page. By using the `/search` path, I could display an array of the Strings that had been added to the Search Engine that contained the query.
