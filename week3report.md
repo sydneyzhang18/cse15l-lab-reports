@@ -66,7 +66,7 @@ The bug:
      return newArray;
    }
    ```
-   
+  
 The fixed code assigns each index of `newArray` to an element of `arr` in correct, reversed order by putting `newArray[arr.length - i - 1]` on the left side of the assignment operator, instead of incorrectly putting `arr[i]` on the left. This way, `newArray` gets updated to the values in reverse order. The fixed code also properly returns `newArray` instead of `arr`, so that the array that has been reversed is returned as a result of the program.
   
 
