@@ -38,7 +38,7 @@
   }
 ```
 
-**The symptom: **
+**The symptom:**
 
   Terminal:
   ![run junit](run junit reversed.png)
