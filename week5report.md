@@ -17,7 +17,7 @@ non-fiction/OUP/Abernathy/ch7.txt:0
 non-fiction/OUP/Abernathy/ch8.txt:0
 non-fiction/OUP/Abernathy/ch9.txt:0
 ```
-This command counts the occurrences of "William" in each of the .txt files in non-fiction/OUP/Abernathy/ directory. It's useful becausee it's able to count string occurences in specified directories.
+This command counts the occurrences of "William" in each of the .txt files in non-fiction/OUP/Abernathy/ directory. It's useful because it can easily tell us when there are multiple occurences of a string in each file, and it outputs a concise summary.
 
 ```
 $ grep -c "Lucayans" */*/Bahamas*.txt
@@ -26,7 +26,7 @@ travel_guides/berlitz2/Bahamas-Intro.txt:0
 travel_guides/berlitz2/Bahamas-WhatToDo.txt:0
 travel_guides/berlitz2/Bahamas-WhereToGo.txt:0
 ```
-This command counts the occurrences of "Lucayans" in each of the .txt files in the entire written_2 directory whose file name begins with Bahamas. It's useful because it allows us to easily count string occurrences without having to scroll through blocks of text, like with using -r.
+This command counts the occurrences of "Lucayans" in each of the .txt files in specified path whose file name begins with Bahamas. It's useful because it allows us to easily count string occurrences without having to scroll through blocks of text, like with using -r.
 
 
 **-i (ignore case)** 
@@ -49,7 +49,7 @@ travel_guides/berlitz2/California-WhereToGo.txt
 This command combines the -l option (see below) with the -i option to search for case-insensitive occurences of the string "gold" in the specified path and output only the file names in which it is found. It's useful because it allows us to combine grep options so that we can output only file names and search without case sensitivity.
 
 
-**-l**
+**-l (files with matches)**
 *Source: found using `man grep` and while collaborating during Lab 4*
 ```
 $ grep -l "Parisien" travel_guides/berlitz2/*.txt
@@ -79,10 +79,10 @@ travel_guides/berlitz2/Crete-History.txt
 travel_guides/berlitz2/Crete-WhatToDo.txt
 travel_guides/berlitz2/Crete-WhereToGo.txt
 ```
-This command outputs the names of files in the specified subdirectories that include the string "Greece". It's helpful because we might only need to know the file names rather than the context in which the string occurs.
+This command outputs the names of files in the specified path that include the string "Greece". It's helpful because we might only need to know the file names rather than the context in which the string occurs.
 
 
-**-r**
+**-r (recursive)**
 *Source: found using `man grep`*
 ```
 $ grep -r "Xtebentun"
