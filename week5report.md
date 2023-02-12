@@ -1,7 +1,7 @@
 # Lab Report 3
-## grep Command-line Options
+## `grep` Command-line Options
 
-(current directory is ~/Documents/Github/docsearch/written_2)
+(current directory is `~/Documents/Github/docsearch/written_2`)
 
 **-c (count)**
 *Source: found using `man grep`*
@@ -17,7 +17,7 @@ non-fiction/OUP/Abernathy/ch7.txt:0
 non-fiction/OUP/Abernathy/ch8.txt:0
 non-fiction/OUP/Abernathy/ch9.txt:0
 ```
-This command counts the occurrences of "William" in each of the .txt files in non-fiction/OUP/Abernathy/ directory. It's useful because it can easily tell us when there are multiple occurences of a string in each file, and it outputs a concise summary.
+This command counts the occurrences of "William" in each of the .txt files in the `non-fiction/OUP/Abernathy/` directory. It's useful because it can easily tell us when there are multiple occurences of a string in each file, and it outputs a concise summary.
 
 ```
 $ grep -c "Lucayans" */*/Bahamas*.txt
@@ -38,7 +38,7 @@ $ grep -i "lacquerware" travel_guides/berlitz1/WhatToJapan.txt
         Lacquerware. You are least likely to go wrong in terms of
         uniformly high quality if you’re in the market for lacquerware. Trays,
 ```
-This command searches travel_guides/berlitz1/WhatToJapan.txt for case-insensitive occurrences of "lacquerware". It's useful because we might not always want to search for string case-sensitively.
+This command searches `travel_guides/berlitz1/WhatToJapan.txt` for case-insensitive occurrences of "lacquerware". It's useful because we might not always want to search for string case-sensitively.
 
 ```
 $ grep -l -i "gold" */*/California*.txt
@@ -55,7 +55,7 @@ This command combines the -l option (see below) with the -i option to search for
 $ grep -l "Parisien" travel_guides/berlitz2/*.txt
 travel_guides/berlitz2/Cuba-WhatToDo.txt
 ```
-This command searches all of the .txt files in the travel_guides/berlitz2/ subdirectory for the string "Parisien" and outputs the name of the file in which it occurs. This is helpful because it provides an easy-to-read search output that consists only of file names.
+This command searches all of the .txt files in the `travel_guides/berlitz2/` subdirectory for the string "Parisien" and outputs the name of the file in which it occurs. This is helpful because it provides an easy-to-read search output that consists only of file names.
 
 ```
 $ grep -l "Greece" */*/*.txt
@@ -88,11 +88,11 @@ This command outputs the names of files in the specified path that include the s
 $ grep -r "Xtebentun"
 ./travel_guides/berlitz2/Cancun-WhatToDo.txt:Tequila and other alcohol. Tequila is the national drink of Mexico, made from the distilled juice of the agave plant (100% agave tequila is the best quality), and it can be bought under numerous trade names. It is produced only in a very small region of Mexico, around the town of Tequila near Guadalajara, and is in reality a refined version of the agave drink Mezcal. You can also take home a bottle of the Yucatecan liquor Xtebentun, with its flavor of anise, honey, and flowers.
 ```
-This command recursively searches the subdirectories of written_2 for the case sensitive string "Xtebentun", and it outputs the occurrences as a block of text, giving the string context. It's helpful when we don't know the specific subdirectory we want to search or want to search the entire directory, and when we want to see the string in the context of the file.
+This command recursively searches the subdirectories of `written_2` for the case sensitive string "Xtebentun", and it outputs the occurrences as a block of text, giving the string context. It's helpful when we don't know the specific subdirectory we want to search or want to search the entire directory, and when we want to see the string in the context of the file.
 
 ```
 $ grep -r "Lacquerware"
 ./travel_guides/berlitz1/WhatToJapan.txt:        Lacquerware. You are least likely to go wrong in terms of
 ./travel_guides/berlitz2/China-WhatToDo.txt:Lacquerware. Numerous layers of lacquer, individually polished, are applied to trays, cups, vases, and boxes. Lacquer also makes the ideal finish for tea and coffee services, since the material resists boiling water as well as the chemicals in tea and coffee.
 ```
-This command recursively searches the subdirectories of written_2 for the case sensitive string "Lacquerware". It's helpful because we don't have to specify any path; it just searches the entire directory.
+This command recursively searches the subdirectories of `written_2` for the case sensitive string "Lacquerware". It's helpful because we don't have to specify any path; it just searches the entire directory.
