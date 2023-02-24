@@ -15,7 +15,7 @@
 **3. The real deal Start the timer!**
 
 **4. Log into ieng6**
-    ![step 1](lab 7 step 4.png)
+    ![step 4](lab 7 step 4.png)
     Keys pressed:
         `ssh cs15lwi23aww@ieng6.ucsd.edu<enter>`
     I type out the entire command to log in to my ieng6 account because the terminal can't autofill my username.
