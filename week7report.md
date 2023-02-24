@@ -63,9 +63,6 @@
 
 **9. Commit and push the resulting change to your Github account (you can pick any commit message!)**
     ![step 9](lab7 step 9.png)
-    git add ListExamples.java
-    git commit -m "Updated"
-    git push git@github.com:sydneyzhang18/lab7.git
     Keys pressed:
         `git add L<tab>.j<tab><enter>`
         `git commit -m "Updated"<enter>`
